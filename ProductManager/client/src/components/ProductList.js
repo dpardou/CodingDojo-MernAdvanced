@@ -7,7 +7,8 @@ const ProductList = (props) => {
     const { product, setProduct } = props;
 
     const removeFromDom = (prodId) => {
-        setProduct(product.filter(prod=>prod.id !== prodId));
+        console.log(prodId)
+        setProduct(product.filter(prod=>prod._id !== prodId));
     }
 
     return (

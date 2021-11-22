@@ -18,9 +18,9 @@ const Main = () =>{
         });
     }, []);
     
-    const removeFromDom = prodId => {
-        setProduct(product.filter(prod => prod._id !== prodId));
-    }
+    //const removeFromDom = prodId => {
+    //    setProduct(product.filter(prod => prod._id !== prodId));
+    //}
 
     const createProduct = (prod) => {
         axios.post("http://localhost:8000/api/product/new", prod)
@@ -40,7 +40,7 @@ const Main = () =>{
           />
             <hr/>
             <h1>All Products: </h1>
-            {loaded && <ProductList product={product} setProduct={setProduct} removeFromDom={removeFromDom}/>}
+            {loaded && <ProductList product={product} setProduct={setProduct}/>}
         </div>
     )
 }
